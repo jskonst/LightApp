@@ -28,7 +28,7 @@ export const BaseLight: React.FC<BaseLightProps> = ({
                 console.log('BaseLight handleChange', event.target.value);
                 setHeight(+event.target.value)
             }
-        }, [height, value]
+        }, [changeHandler]
     );
 
     console.log('BaseLight', height);
