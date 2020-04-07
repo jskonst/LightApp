@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import { BaseLight } from "../BaseLight/BaseLight";
 
 const heightElements: ILuks[] = [
@@ -23,7 +23,21 @@ const heightElements: ILuks[] = [
 ]
 
 export const Luks: React.FC = () => {
+    const [height, setHeight] = useState(0);
+
+    const handleChange = useCallback(
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            console.log('Luck handleChange', +event.target.value);
+            setHeight(+event.target.value)
+        }, [height]
+    );
+
+    console.log('Luks', height);
+
     return (
-        <BaseLight data={heightElements}/>
+        <>
+            <BaseLight data={heightElements} value={height} changeHandler={handleChange}/>
+            <BaseLight data={heightElements} value={height} changeHandler={handleChange}/>
+        </>
     )
 }
