@@ -3,7 +3,7 @@ import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@ma
 
 type BaseLightProps = {
     data: IHeight[] | ILuks[],
-    value?: any,
+    value?: number,
     changeHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
