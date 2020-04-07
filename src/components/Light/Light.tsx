@@ -5,7 +5,7 @@ import { LampType } from './LampType/LampType'
 import { NominalPower } from './NominalPower/NominalPower'
 import { TextField } from '@material-ui/core'
 
-export const Light = () => {
+export const Light: React.FC = () => {
     return (
         <>
             <form noValidate autoComplete="off">

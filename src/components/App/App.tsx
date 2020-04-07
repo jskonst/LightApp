@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Light} from '../Light/Light';
+import { Light } from '../Light/Light';
 import Wires from '../Wires/Wires';
 
 const App: React.FC = () => {
